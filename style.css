@@ -1,28 +1,14 @@
 *, *::before, *::after {
-    /* box-sizing: border-box; */
+   /* box-sizing: border-box;*/
 }
 
 body {
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.4em;
-    color: white;
-    text-align: center;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    line-height: 1.2;
-    margin-top: 1em;
-    margin-bottom: 0.4em;
-}
-
-h2 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    padding: 0.7em;
-}
+/* EERSTE SECTION*/
 
 header {
     background-image: url(images/geran-de-klerk-N9s3FjzsstM-unsplash.jpg);
@@ -34,11 +20,67 @@ header {
 
 nav ul {
     list-style: none;
+    display: flex;
+    justify-content: space-between;
 }
 
 nav img {
     width: 200px;
     margin-top: 1.7em;
+}
+
+nav button:hover {
+    background-color: mediumblue;
+    transition: 0.25s ease;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.4em;
+    color: white;
+    text-align: center;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    line-height: 1.2;
+    margin-bottom: 0.4em;
+    padding-bottom: 1em;
+    font-weight: 900;
+}
+
+h1:hover {
+    animation-name: hovertje;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+@keyframes hovertje {
+    0% {
+        transform: scale(1.00);
+        text-decoration: underline;
+    }
+    50% {
+        transform: scale(1.01);
+        text-decoration: underline;
+    }
+    100% {
+        transform: scale(1.00);
+        text-decoration: underline;
+    }
+}
+
+/* EIND EERSTE SECTION*/
+
+
+
+
+/* TWEEDE SECTION*/
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding: 0.7em;
+    font-size: 1.5em
 }
 
 a {
@@ -48,23 +90,19 @@ a {
     font-weight: 500;
 }
 
-time {
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.8em;
-    text-align: center;
-    display: inherit;
-    padding-bottom: 2em;
-}
-
 main {
     margin: 0;
 }
 
+.eerste {
+    margin-bottom: 3em;
+}
 main article {
     background-color: #084ccd;
     margin: 1em;
     margin-top: -2.5em;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 main h3 {
@@ -85,6 +123,10 @@ main p {
     line-height: 1.7em;
 }
 
+main ul li {
+    list-style-type: none;
+}
+
 main ul li a {
     position: relative;
     color: #084ccd;
@@ -99,33 +141,19 @@ main ul li a {
 
 main iframe {
     width: 100%;
-    height: 15em
+    height: 15em;
 }
 
-h4 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    color: darkgray;
-    text-transform: uppercase;
-    font-size: 0.8em;
-    padding-left: 1.2em;
-    padding-top: 1em;
-    margin-bottom: 0.5em;
-}
-
-.hva {
-    width: 100%;
-    margin-left: 1em;
-}
-
-section {
+section:nth-of-type(1) {
     background-color: #ff4b33;
+    width: 100%;
     margin-top: -1em;
+    padding-bottom: 0.5em
 }
 
 section article {
     background-color: white;
-    margin-top: 2em;
+    margin-top: 5em;
 }
 
 section h2 {
@@ -134,7 +162,6 @@ section h2 {
 
 section img {
     width: 100%;
-    margin-top: -2em;
 }
 
 section p {
@@ -144,7 +171,352 @@ section p {
     padding-left: 2em;
     font-weight: 600;
     font-size: 1.1em;
-    margin-bottom: 3em;
+    margin-bottom: 0.5em;
 }
 
 
+
+
+/* SOCIAL MEDIA KNOPPEN*/
+
+section:nth-of-type(2) li {
+    list-style-type: none;
+    width: 33.33%;
+    float: left;
+}
+
+section:nth-of-type(2) li:nth-of-type(1) {
+    background-color: #ffc92f;
+    background-image: url(images/facebookicoon.png);
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+section:nth-of-type(2) li:nth-of-type(2) {
+    background-color: pink;
+    background-image: url(images/twittericoon.png);
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+section:nth-of-type(2) li:nth-of-type(3) {
+    background-color: darkseagreen;
+    background-image: url(images/instagramicoon.png);
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+section:nth-of-type(2) li:nth-of-type(1):hover, section:nth-of-type(2) li:nth-of-type(2):hover, section:nth-of-type(2) li:nth-of-type(3):hover {
+    background-color: #084ccd;
+    transition: 0.25s;
+}
+
+
+
+
+/* BLAUWE SECTION */
+
+section:nth-of-type(3) {
+    background-color: #084ccd;
+    height: 58vh;
+    width: 100%;
+}
+
+.nieuws {
+    text-align: center;
+    padding-top: 5em;
+}
+
+h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 200;
+    font-size: 1.1em;
+    color: white;
+    text-align: center;
+    margin-top: -2em;
+}
+
+input {
+    padding: 1em;
+    margin-top: 2.5em;
+}
+
+input[type="text"] {
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+    width: 80%;
+    transform: translate(8%, -50%);
+    font-weight: 200;
+}
+
+form button {
+    font-size: 1em;
+    padding: 1em;
+    width: 40vw;
+    background-color: #ffc92f;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+form button:hover {
+    background-color: orange;
+    transition: 0.25s ease;
+}
+
+div h2 {
+    opacity: 0;
+}
+
+div h2.joejoe {
+    opacity: 1;
+    text-align: center;
+    animation-name: zoom;
+    animation-duration: 0.5s;
+    animation-iteration-count: 2;
+}
+
+/* Div geplaatst omdat het aanroepen in javascript op die manier makkelijker gaat.*/
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.0);
+        color: white;
+    }
+    50% {
+        transform: scale(1.2);
+        color: darkorange;
+    }
+    100% {
+        transform: scale(1.0);
+        color: white;
+    }
+}
+
+/* EIND BLAUWE SECTION */
+
+
+/* FOOTER */
+
+footer {
+    background-color: black;
+    height: 25vh;
+    margin-top: -7.5em
+}
+
+footer h2 {
+    color: lightgrey;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 5em;
+    transform: translateY(20px);
+}
+
+footer p {
+    color: darkgrey;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+footer h2:hover {
+    font-weight: 600;
+    color: whitesmoke;
+}
+
+footer p:hover {
+    color: white;
+    transform: rotate(360deg);
+    transition: 1s ease;
+}
+
+.uniek {
+    height: 10vh;
+}
+
+
+@media (min-width: 600px) {
+    h2 {
+        font-size: 1.65em;
+    }
+    section article p {
+        font-size: 1.2em;
+    }
+    footer {
+        margin-top: -9em;
+    }
+    section:nth-of-type(3) {
+        height: 45vh;
+    }
+}
+
+/* TABLET FORMAAT */
+
+@media (min-width: 800px) {
+    h2 {
+        font-size: 1.8em;
+    }
+    section article {
+        max-width: 85%;
+        margin-left: 4em;
+    }
+    .eerste {
+        margin-top: -3em;
+    }
+    section article p {
+        font-size: 1.5em;
+        width: 30em;
+        max-width: 90%
+    }
+    section:nth-of-type(3) {
+        height: 65vh;
+    }
+    .titel, .trending{
+        margin-left: 1.3em;
+    }
+    
+    
+    
+    section:nth-of-type(2) li:nth-of-type(1) {
+    background-color: #ffc92f;
+    background-image: url(images/facebookicoon.png);
+    background-size: 5%;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+    
+    section:nth-of-type(2) li:nth-of-type(2) {
+    background-color: pink;
+    background-image: url(images/twittericoon.png);
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+    
+    section:nth-of-type(2) li:nth-of-type(3) {
+    background-color: darkseagreen;
+    background-image: url(images/instagramicoon.png);
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+    
+}
+
+@media (min-width: 1300px) {
+    .titel {
+        transform: translateX(250px);
+        margin: 0;
+        margin-bottom: -1em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    footer {
+        margin-top: -10em;
+    }
+    h1 {
+        margin-left: 2.5em;
+        margin-right: 2.5em;
+    }
+    section article {
+        transform: scale(0.9);
+        margin: 0;
+        margin-top: 5em;
+        width: 90%;
+    }
+    section article p {
+        font-size: 1em;
+    }
+    .eerste {
+        transform: scale(0.70);
+    }
+    article iframe {
+        height: 50vh;
+        margin-top: -3em;
+        margin-bottom: -3em;
+    }
+    span p {
+        font-size: 1.5em;
+    }
+    section:nth-of-type(1) {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        padding-bottom: 3em;
+    }
+    section:nth-of-type(1) article {
+        margin-left: 3em;
+    }
+    section:nth-of-type(3) {
+        height: 70vh;
+    }
+    
+    
+    section:nth-of-type(2) li:nth-of-type(1) {
+    background-color: #ffc92f;
+    background-image: url(images/facebookicoon.png);
+    background-size: 3%;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+    
+    section:nth-of-type(2) li:nth-of-type(2) {
+    background-color: pink;
+    background-image: url(images/twittericoon.png);
+    background-size: 7%;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+    
+    section:nth-of-type(2) li:nth-of-type(3) {
+    background-color: darkseagreen;
+    background-image: url(images/instagramicoon.png);
+    background-size: 7%;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+    
+    
+    section form {
+        width: 100%;
+    }
+    .trending {
+        position: absolute;
+        transform: translateY(-30px);
+    }
+    input[type="text"] {
+    font-family: 'Playfair Display', serif;
+    font-size: 1em;
+    width: 60%;
+    transform: translate(30%, -50%);
+    font-weight: 200;
+}
+    
+}
+
+@media (min-width: 1700px) {
+    h2 {
+        color: aqua;
+    }
+    section article {
+        max-width: 100%;
+    }
+    section article p {
+        font-size: 1.5em;
+        max-width: 100%;
+    }
+    section:nth-of-type(1) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    footer {
+        margin-top: -12em;
+    }
+}
